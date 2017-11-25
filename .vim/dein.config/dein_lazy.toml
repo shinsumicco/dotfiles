@@ -1,0 +1,21 @@
+[[plugins]]
+repo = "Shougo/unite.vim"
+
+[[plugins]]
+repo = "Shougo/neomru.vim"
+on_source = ["unite.vim"]
+
+[[plugins]]
+repo = "Shougo/neocomplete.vim"
+hook_add = """
+    let g:neocomplete#enable_at_startup = 1
+"""
+on_i = 1
+
+[[plugins]]
+repo = "davidhalter/jedi-vim"
+on_ft = ["python"]
+
+[[plugins]]
+repo = "lambdalisue/vim-pyenv"
+depends = ["davidhalter/jedi-vim"]
