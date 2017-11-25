@@ -11,6 +11,8 @@ deploy:
 	ln -sf $(PWD)/.inputrc $(HOME)/
 	# .bashrc
 	python $(PWD)/scripts/apply_bashrc.py $(HOME)/.bashrc
+	# .gitconfig
+	ln -sf $(PWD)/.gitconfig $(HOME)/.gitconfig
 
 porg:
 	sh $(PWD)/scripts/install_porg.sh
