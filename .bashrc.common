@@ -9,6 +9,9 @@ if [ -f ~/.dircolors ]; then
         echo "dircolors/gdircolors is not installed."
     fi
 fi
+if type gls > /dev/null 2>&1; then
+    alias ls="gls --color=auto"
+fi
 
 # git ps1
 GIT_PS1_SHOWDIRTYSTATE=true
