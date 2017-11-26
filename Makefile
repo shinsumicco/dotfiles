@@ -11,6 +11,8 @@ deploy:
 	ln -sf $(PWD)/.inputrc $(HOME)/
 	# .bashrc
 	python $(PWD)/scripts/apply_bashrc.py $(HOME)/.bashrc
+	# .dircolors
+	ln -sf $(PWD)/.dircolors.256dark $(HOME)/.dircolors
 	# .git*
 	ln -sf $(PWD)/.gitconfig $(HOME)/.gitconfig
 	ln -sf $(PWD)/.gitignore_global $(HOME)/.gitignore_global
