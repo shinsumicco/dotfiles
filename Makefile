@@ -3,6 +3,7 @@ all: deploy
 deploy:
 	# Vim
 	ln -sf $(PWD)/.vimrc $(HOME)/
+	mkdir -p $(HOME)/.vim
 	ln -sf $(PWD)/.vim/dein.config/ $(HOME)/.vim/
 	ln -sf $(PWD)/.vim/colors/ $(HOME)/.vim/
 	# tmux
