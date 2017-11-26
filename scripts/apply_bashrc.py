@@ -16,5 +16,6 @@ with open(fp_bashrc, "r") as fin:
         if source_command in line:
             break
     else:
+        os.system("echo \"\" >> " + fp_bashrc)
         os.system("echo \"# include .bashrc.common in dotfiles repository\" >> " + fp_bashrc)
         os.system("echo \"" + escaped_source_command + "\" >> " + fp_bashrc)
