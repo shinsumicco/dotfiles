@@ -35,11 +35,12 @@ if dein#check_install()
 endif
 "End dein Scripts-------------------------
 
-set tabstop=4
-
+" vim-colors-solarized
+syntax enable
 set background=dark
 colorscheme solarized
-syntax on
+
+set tabstop=4
 
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
