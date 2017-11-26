@@ -11,6 +11,8 @@ deploy:
 	ln -sf $(PWD)/.inputrc $(HOME)/
 	# .bashrc
 	python $(PWD)/scripts/apply_bashrc.py $(HOME)/.bashrc
+	# .dircolors
+	ln -sf $(PWD)/.dircolors.256dark $(HOME)/.dircolors
 
 porg:
 	sh $(PWD)/scripts/install_porg.sh
