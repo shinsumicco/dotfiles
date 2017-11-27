@@ -35,18 +35,18 @@ if dein#check_install()
 endif
 "End dein Scripts-------------------------
 
+" Common
+set tabstop=4
+set backspace=indent,eol,start
+set whichwrap=b,s,h,l,<,>,[,]
+set clipboard=unnamed,autoselect
+
 " vim-colors-solarized
-syntax enable
+syntax on
 set background=dark
 colorscheme solarized
 
-set tabstop=4
-
-set backspace=indent,eol,start
-set whichwrap=b,s,h,l,<,>,[,]
-
-set clipboard=unnamed,autoselect
-
+" Python
 autocmd FileType python setl autoindent
 autocmd FileType python setlocal completeopt-=preview
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
