@@ -36,6 +36,11 @@ endif
 "End dein Scripts-------------------------
 
 " Common
+set expandtab
+let _curfile = expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
 set tabstop=4
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
