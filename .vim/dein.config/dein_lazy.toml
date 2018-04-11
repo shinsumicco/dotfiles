@@ -22,4 +22,5 @@ hook_add = """
 
 [[plugins]]
 repo = "lambdalisue/vim-pyenv"
-depends = ["davidhalter/jedi-vim"]
+depends = ["jedi-vim"]
+on_ft = ["python"]
