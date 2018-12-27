@@ -15,7 +15,12 @@ on_i = 1
 [[plugins]]
 repo = "davidhalter/jedi-vim"
 on_ft = ["python"]
+hook_add = """
+    let g:jedi#popup_select_first = 0
+    let g:jedi#popup_on_dot = 0
+"""
 
 [[plugins]]
 repo = "lambdalisue/vim-pyenv"
-depends = ["davidhalter/jedi-vim"]
+depends = ["jedi-vim"]
+on_ft = ["python"]
