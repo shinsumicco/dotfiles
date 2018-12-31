@@ -45,6 +45,7 @@ set tabstop=4
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed,autoselect
+set encoding=utf-8
 
 " vim-colors-solarized
 syntax on
