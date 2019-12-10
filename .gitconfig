@@ -3,5 +3,7 @@
     excludesfile = ~/.gitignore_global
 [alias]
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+    prune-branch = "!f() { if [ ${#} == 0 ]; then echo 'fatal: Please specify a remote name.'; else git fetch ${1} --prune; fi }; f"
+    prune-tag = "!f() { if [ ${#} == 0 ]; then echo 'fatal: Please specify a remote name.'; else git fetch ${1} --prune 'refs/tags/*:refs/tags/*'; fi }; f"
 [push]
     default = simple
