@@ -17,6 +17,3 @@ deploy:
 	# .git*
 	ln -sf $(PWD)/.gitconfig $(HOME)/.gitconfig
 	ln -sf $(PWD)/.gitignore_global $(HOME)/.gitignore_global
-
-porg:
-	sh $(PWD)/scripts/install_porg.sh
