@@ -27,12 +27,11 @@ ln -sf ${SCRIPT_DIR}/.gitignore_global ${HOME}/.gitignore_global
 # VScode
 if [ "$(uname)" = "Darwin" ]; then
   # macOS
-  mkdir -p ${HOME}/Library/Application\ Support/Code/User
-  cp ${SCRIPT_DIR}/.vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
-  cp ${SCRIPT_DIR}/.vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
+  SETTING_DIR="${HOME}/Library/Application Support/Code/User"
 elif [ "$(uname)" = "Linux" ]; then
   # Linux
-  mkdir -p ${HOME}/.config/Code/User
-  cp ${SCRIPT_DIR}/.vscode/settings.json ${HOME}/.config/Code/User/settings.json
-  cp ${SCRIPT_DIR}/.vscode/keybindings.json ${HOME}/.config/Code/User/keybindings.json
+  SETTING_DIR="${HOME}/.config/Code/User"
 fi
+mkdir -p ${HOME}/.config/Code/User
+cp -i ${SCRIPT_DIR}/.vscode/settings.json "${SETTING_DIR}/settings.json"
+cp -i ${SCRIPT_DIR}/.vscode/keybindings.json "${SETTING_DIR}/keybindings.json"

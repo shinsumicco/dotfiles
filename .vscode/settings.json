@@ -1,4 +1,13 @@
 {
+    // Color Theme
+    "workbench.colorTheme": "Better Solarized Dark",
+
+    // Editor
+    "editor.renderControlCharacters": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+
+    // Python
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
@@ -9,5 +18,85 @@
         "--ignore=E501",
         "--max-line-length=150"
     ],
-    "workbench.colorTheme": "Better Solarized Dark"
+
+    // LaTeX
+    "latex-workshop.latex.tools": [
+        {
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-kanji=utf8",
+                "%DOCFILE%"
+            ],
+            "name": "pdflatex"
+        },
+        {
+            "command": "platex",
+            "args": [
+                "-synctex=1",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-kanji=utf8",
+                "%DOCFILE%"
+            ],
+            "name": "platex"
+        },
+        {
+            "command": "pbibtex",
+            "args": [
+                "-kanji=utf8",
+                "%DOCFILE%"
+            ],
+            "name": "pbibtex"
+        },
+        {
+            "command": "dvipdfmx",
+            "args": [
+                "%DOCFILE%.dvi"
+            ],
+            "name": "dvipdfmx"
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex (with pbibtex)",
+            "tools": [
+                "pdflatex",
+                "pbibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex (without pbibtex)",
+            "tools": [
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "platex (with pbibtex)",
+            "tools": [
+                "platex",
+                "pbibtex",
+                "platex",
+                "platex",
+                "dvipdfmx"
+            ]
+        },
+        {
+            "name": "platex (without pbibtex)",
+            "tools": [
+                "platex",
+                "platex",
+                "dvipdfmx"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.viewer": "tab"
 }

@@ -1,13 +1,13 @@
 [
     {
-        "key": "ctrl+shift+down",
-        "command": "workbench.action.terminal.focus",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
+        "key": "ctrl+[",
         "command": "workbench.action.focusFirstEditorGroup",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+shift+right",
