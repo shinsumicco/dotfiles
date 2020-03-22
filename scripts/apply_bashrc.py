@@ -6,8 +6,8 @@ fp_bashrc = os.path.realpath(os.path.expanduser(sys.argv[1]))
 if not os.path.exists(fp_bashrc):
     sys.exit(1)
 
-source_command = "source \"$HOME/dotfiles/.bashrc.common\""
-escaped_source_command = "source \\\"\\$HOME/dotfiles/.bashrc.common\\\""
+source_command = "source \"${HOME}/dotfiles/.bashrc.common\""
+escaped_source_command = "source \\\"\\${HOME}/dotfiles/.bashrc.common\\\""
 
 with open(fp_bashrc, "r") as fin:
     lines = fin.readlines()
