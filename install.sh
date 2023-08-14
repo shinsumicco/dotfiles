@@ -15,7 +15,7 @@ ln -sf ${SCRIPT_DIR}/.tmux.conf ${HOME}/.tmux.conf
 ln -sf ${SCRIPT_DIR}/.inputrc ${HOME}/.inputrc
 
 # .bashrc
-python ${SCRIPT_DIR}/scripts/apply_bashrc.py ${HOME}/.bashrc
+python3 ${SCRIPT_DIR}/scripts/apply_bashrc.py ${HOME}/.bashrc
 
 # .dircolors
 ln -sf ${SCRIPT_DIR}/.dircolors.256dark ${HOME}/.dircolors
